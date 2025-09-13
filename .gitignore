@@ -1,0 +1,19 @@
+# Node & builds
+node_modules/
+dist/
+build/
+
+# Frontend (CRA)
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.parcel-cache
+
+# Backend (Node/Express)
+backend/node_modules/
+backend/.env
+
+# System/IDE
+.DS_Store
+.vscode/
+.idea/

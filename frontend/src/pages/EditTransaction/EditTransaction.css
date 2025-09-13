@@ -1,0 +1,57 @@
+.transaction-form {
+  max-width: 720px;
+  margin: 24px auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 24px;
+  background: #fff;
+  display: grid;
+  gap: 12px;
+}
+
+.transaction-header {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.input-label {
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
+
+.input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.button {
+  border: 1px solid transparent;
+  background: rgb(85, 85, 227);
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.button.secondary {
+  background: #f6f6f6;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.error-text {
+  color: #d00;
+  font-size: 12px;
+  margin-top: -6px;
+  margin-bottom: 6px;
+  display: block;
+}

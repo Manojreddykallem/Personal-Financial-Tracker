@@ -1,0 +1,41 @@
+.table-row {
+  display: flex;
+  justify-content: space-start;
+  list-style-type: none;
+  border-bottom: 1px solid #cbd5e1;
+  border-right: 1px solid #cbd5e1;
+  border-left: 1px solid #cbd5e1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.transaction-text {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 15px;
+  width: 16.5%;
+}
+
+.delete-edit-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.delete-image{
+  height: 20px;
+  width: 20px;
+}
+
+.red-colour{
+  color: red;
+}
+
+.green-colour{
+  color: green;
+}
+
+
+
+
