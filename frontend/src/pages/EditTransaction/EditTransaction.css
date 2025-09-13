@@ -51,7 +51,7 @@
 .error-text {
   color: #d00;
   font-size: 12px;
-  margin-top: -6px;
-  margin-bottom: 6px;
+  margin-top: 12px;
+  margin-bottom: -3px;
   display: block;
 }

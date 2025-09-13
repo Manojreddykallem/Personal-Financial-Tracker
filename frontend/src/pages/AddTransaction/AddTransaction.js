@@ -14,13 +14,16 @@ export default function AddTransaction({ onAdd }) {
   const [amountInput, setAmountInput] = useState("");
   const [optionId, setOptionId] = useState("INCOME");
   const [dateInput, setDateInput] = useState("");
+  const [errorMessage, setErrorMessage] = useState("")
   
   const [categoryInput, setCategoryInput] = useState("");
   const onAddTransaction = (e) => {
     e.preventDefault();
     if (!titleInput || !amountInput || !dateInput || !categoryInput) {
+      setErrorMessage("ALL FIELDS ARE REQUIRED")
       return;
     }
+    setErrorMessage("")
 
     const parsedAmount = Number(amountInput);
     if (Number.isNaN(parsedAmount)) return;
@@ -99,6 +102,8 @@ export default function AddTransaction({ onAdd }) {
           </option>
         ))}
       </select>
+
+      {errorMessage && <p className="error-text">{errorMessage}</p>}
 
       <button type="submit" className="button">Add</button>
     </form>

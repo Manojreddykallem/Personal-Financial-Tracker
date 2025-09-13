@@ -21,6 +21,7 @@ export default function EditTransaction({ transactionsList = [], onEdit }) {
   const [optionId, setOptionId] = useState("INCOME");
   const [dateInput, setDateInput] = useState("");
   const [categoryInput, setCategoryInput] = useState("");
+  const [errorMessage, setErrorMessage] = useState("")
 
   useEffect(() => {
     if (!tx) return;
@@ -35,11 +36,11 @@ export default function EditTransaction({ transactionsList = [], onEdit }) {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!tx) return;
-
-    
     if (!titleInput || !amountInput || !dateInput || !categoryInput) {
+        setErrorMessage("ALL FIELDS ARE REQUIRED")
       return;
     }
+    setErrorMessage("");
 
     const parsedAmount = Number(amountInput);
     if (Number.isNaN(parsedAmount)) return;
@@ -124,6 +125,8 @@ export default function EditTransaction({ transactionsList = [], onEdit }) {
           </option>
         ))}
       </select>
+
+      {errorMessage && <p className="error-text">{errorMessage}</p>}
 
       <div className="edit-actions">
         <button type="submit" className="button">Save</button>
